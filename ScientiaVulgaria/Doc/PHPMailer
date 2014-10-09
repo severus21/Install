@@ -1,0 +1,5 @@
+Renommer :
+	class.phpmailer -> class.PHPMailer
+	class.smtp -> class.SMTP
+Dans class.phpmailer construct(~l576) supprimer l'utilisation de leur autoloader
+

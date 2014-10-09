@@ -1,0 +1,21 @@
+
+	apt-get install openssl
+	#Créer son propre CA (Certificate Authority)
+	#
+		#Notre clef privée, mdp: zeuscertificatbeta
+		openssl genrsa -aes256 -out zeus-ca.key 4096
+		#Notre certificat
+		openssl req -new -x509 -days 3650 -key zeus-ca.key -out zeus-ca.crt
+		#On vériffie le certificat
+		openssl x509 -in zeus-ca.crt -text -noout
+
+	#Clef et certificat pour le serveur
+		#la clef, MDP : beta
+		openssl genrsa -aes256 -out zeus-server.key 2048
+		#le certif, Attention common name =>nom de domaine du serveur
+		openssl req -new -key zeus-server.key -out zeus-server.csr
+		#On le signe
+		openssl x509 -req -in zeus-server.csr -out zeus-server.crt -sha1 -CA zeus-ca.crt -CAkey zeus-ca.key -CAcreateserial -days 3650
+		#On vérifie
+		openssl x509 -in zeus-server.crt -text -noout
+

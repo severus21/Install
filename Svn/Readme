@@ -1,0 +1,8 @@
+Il faut configurer le parfeu sf install de sv
+
+creation 
+sudo -u svn svnadmin create /var/svn/votre_nouveau_repository
+
+http://www.clubnix.fr/tutoriel_svn
+
+sudo svnserve -d -r /var/svn

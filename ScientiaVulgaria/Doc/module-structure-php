@@ -1,0 +1,33 @@
+Structure module pre-instal:
+	-Lib :
+		-Models :
+			-Module
+			-ModuleRecord.
+			-ModuleManager
+			-...
+		-FormBuilder(opt)
+		-NavBuilder
+		-PaginationBuilder(opt)
+		-RequeteBuilder(opt)
+		
+	-Views :
+		-...
+		
+	-ModuleController.class.php
+	-module.sql
+	-config.xml
+	-install.sh
+	-update.sh(same as install??)
+	
+Structure module post-instal:
+	-Lib :
+		-FormBuilder(opt)
+		-NavBuilder
+		-PaginationBuilder(opt)
+		-RequeteBuilder(opt)
+		
+	-Views :
+		-...
+		
+	-ModuleController.class.php
+	-config.xml

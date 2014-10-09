@@ -1,0 +1,15 @@
+Client :	
+	Pour créer un certificat ssh : 
+			   (on laisse la localisation par défaut
+		clé publique : .ssh/id_rsa.pub 
+		clé privée   : .ssh/id_rsa 
+
+	On copie la clé privée en $HOME/.ssh/identity 
+
+Serveur :
+	Ajouter la clée public cliente dans $HOME/.ssh/authorized_keys :
+		ssh-copy-id -i ~/.ssh/id_rsa.pub <username>@<ipaddress>
+
+
+Serveur & Client :
+	$HOME/.ssh avoir les bon droits(700) et le bon propriètaire.
