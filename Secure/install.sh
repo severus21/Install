@@ -7,6 +7,8 @@ then
 	echo "Droit root requis"
 	return 0
 fi
+	## Gestionnaire mdp
+	apt-get install -y keepassx
 
 	#
 	##
