@@ -127,3 +127,8 @@ sudo /sbin/ldconfig -v
 	rm -r redis-stable
 	rm redis-stable.tar.gz
 	cp Config/redis.conf /etc/redis/6379.conf
+
+
+### Latex
+	apt-get install texlive texlive-lang-french texlive-latex-extra
+	apt-get install kile
